@@ -6,5 +6,10 @@ pipeline {
         git(url: 'https://github.com/Rajendra333/Narendraapplication.git', branch: 'master')
       }
     }
+    stage('Build') {
+      steps {
+        bat 'mvn clean package'
+      }
+    }
   }
 }
